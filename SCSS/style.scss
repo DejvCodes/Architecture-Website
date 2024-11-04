@@ -1,0 +1,269 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $body-font;
+  font-size: $normal-font-size;
+  color: $white-color;
+  background: $black-color;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 1250px;
+  margin-inline: auto;
+}
+.main {
+  overflow: hidden;
+}
+
+/* --------- HEADER & NAV --------- */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  @include flexCenter;
+  z-index: $z-index-header;
+}
+.nav {
+  position: relative;
+  width: 100%;
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  color: $white-color;
+  background: $header-bg-color;
+  font-size: $logo-font-size;
+  font-weight: $font-weight-semi-bold;
+  transition: all 0.2s linear;
+  @include rounded(8px);
+  padding: 0.5rem;
+  margin-left: -0.5rem;
+}
+.nav-logo:hover {
+  color: $logo-hover-color;
+}
+.nav-menu {
+  display: flex;
+}
+.nav-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  column-gap: 1.5rem;
+}
+.nav-link {
+  position: relative;
+  color: $white-color;
+  font-size: $menu-font-size;
+  font-weight: $font-weight-semi-bold;
+  padding-inline: 5px;
+}
+.nav-link::after {
+  position: absolute;
+  content: '';
+  bottom: -5px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: $white-color;
+  transition: width 0.2s ease-out, left 0.2s ease-out;
+}
+.nav-link:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.close-btn,
+.open-btn {
+  display: none;
+  color: $white-color;
+  font-size: $menu-btn-font-size;
+}
+
+/* --------- RESPONSIVE DESIGN --------- */
+@media only screen and (max-width: 1150px) {
+  .container {
+    margin-inline: 1rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    background: $header-bg-color;
+    @include filter(20px);
+    transition: right 0.3s ease;
+    padding: 2rem;
+  }
+  /* --------- SHOW MENU --------- */
+  .show-menu {
+    right: 0;
+  }
+  .nav-list {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .close-btn,
+  .open-btn {
+    display: block;
+  }
+  .close-btn {
+    position: absolute;
+    top: 0.7rem;
+    right: 1.1rem;
+  }
+} 
+
+/* --------- HOME --------- */
+.home-swiper {
+  position: relative;
+  z-index: $z-index-swiper;
+}
+.home-article {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-top: 14rem;
+}
+.home-data {
+  text-align: initial;
+}
+h3.home-subtitle {
+  font-size: $h3-font-size;
+  margin-bottom: 0.5rem;
+}
+h1.home-title {
+  font-size: $biggest-font-size;
+  font-weight: $font-weight-bold;
+  margin-bottom: 2.5rem;
+}
+a.home-button {
+  @include button;
+}
+.home-img,
+.home-shadow,
+.home-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.home-img {
+  object-fit: cover;
+  object-position: center;
+  z-index: $z-index-home-img;
+}
+.home-shadow {
+  @include homeShadow;
+}
+.home-content {
+  max-width: 100%;
+}
+.home-social {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 2.5rem;
+  display: grid;
+  row-gap: 1rem;
+  z-index: $z-index-swiper;
+}
+.home-social-link {
+  color: $white-color;
+  font-size: $social-link-font-size;
+  transition: all 0.2s linear;
+}
+.home-social-link:hover {
+  color: $logo-hover-color;
+  transform: translateY(-7px);
+}
+.home-swiper,
+.home-content,
+.home-img,
+.home-shadow {
+  max-height: 100vh;
+}
+
+/* --------- SWIPER --------- */
+.swiper {
+  height: 100vh;
+}
+.swiper-pagination {
+  position: fixed;
+  width: initial;
+  height: max-content;
+  top: 6rem;
+  right: 4rem;
+  left: initial;
+  font-size: $big-font-size;
+  font-weight: $font-weight-semi-bold;
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+.swiper-pagination-total {
+  font-size: $normal-font-size;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  position: initial;
+  width: initial;
+  height: initial;
+  color: $white-color;
+  cursor: pointer;
+}
+.swiper-navigation {
+  position: absolute;
+  height: max-content;
+  display: flex;
+  font-size: $social-link-font-size;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  column-gap: 2.5rem;
+  z-index: $z-index-swiper;
+}
+
+/* --------- RESPONSIVE DESIGN --------- */
+@media only screen and (max-width: 450px) {
+  .home-article {
+    padding-top: 13rem;
+  }
+  h3.home-subtitle {
+    margin-bottom: 0.7rem;
+  }
+  h1.home-title {
+    font-size: calc($biggest-font-size - 0.8rem);
+    margin-bottom: 1.5rem;
+  }
+  .swiper-pagination {
+    top: 5rem;
+    right: 2rem;
+    font-size: calc($big-font-size - 1rem);
+  }
+}

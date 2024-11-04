@@ -1,0 +1,39 @@
+@mixin flexCenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin filter($blur: 30px) {
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+}
+
+@mixin rounded($radius: 12px) {
+  border-radius: $radius;
+}
+
+@mixin homeShadow {
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+@mixin button {
+  color: $white-color;
+  font-size: $menu-btn-font-size;
+  font-weight: $font-weight-semi-bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+
+  i {
+    font-size: $logo-font-size;
+    transition: transform 0.3s;
+  }
+
+  &:hover i {
+    transform: translateX(0.5rem);
+  }
+}

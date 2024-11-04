@@ -1,0 +1,332 @@
+/* --------- GOOGLE FONTS --------- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap");
+/* .5rem = 8px | 1rem = 16px ... */
+/* --------- COLORS --------- */
+/* --------- SIZES --------- */
+/* --------- FONTS & TYPOGRAPHY --------- */
+/* --------- FONT WEIGHT --------- */
+/* --------- Z-INDEX --------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1rem;
+  color: #FFF;
+  background: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1250px;
+  margin-inline: auto;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/* --------- HEADER & NAV --------- */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.nav {
+  position: relative;
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  color: #FFF;
+  background: rgba(0, 0, 0, 0.5882352941);
+  font-size: 1.35rem;
+  font-weight: 600;
+  transition: all 0.2s linear;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-left: -0.5rem;
+}
+
+.nav-logo:hover {
+  color: #C57833;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+
+.nav-link {
+  position: relative;
+  color: #FFF;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-inline: 5px;
+}
+
+.nav-link::after {
+  position: absolute;
+  content: "";
+  bottom: -5px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: #FFF;
+  transition: width 0.2s ease-out, left 0.2s ease-out;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.close-btn,
+.open-btn {
+  display: none;
+  color: #FFF;
+  font-size: 1.4rem;
+}
+
+/* --------- RESPONSIVE DESIGN --------- */
+@media only screen and (max-width: 1150px) {
+  .container {
+    margin-inline: 1rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5882352941);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: right 0.3s ease;
+    padding: 2rem;
+  }
+  /* --------- SHOW MENU --------- */
+  .show-menu {
+    right: 0;
+  }
+  .nav-list {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .close-btn,
+  .open-btn {
+    display: block;
+  }
+  .close-btn {
+    position: absolute;
+    top: 0.7rem;
+    right: 1.1rem;
+  }
+}
+/* --------- HOME --------- */
+.home-swiper {
+  position: relative;
+  z-index: 10;
+}
+
+.home-article {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-top: 14rem;
+}
+
+.home-data {
+  text-align: initial;
+}
+
+h3.home-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+h1.home-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+a.home-button {
+  color: #FFF;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+a.home-button i {
+  font-size: 1.35rem;
+  transition: transform 0.3s;
+}
+a.home-button:hover i {
+  transform: translateX(0.5rem);
+}
+
+.home-img,
+.home-shadow,
+.home-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+}
+
+.home-shadow {
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.home-content {
+  max-width: 100%;
+}
+
+.home-social {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 2.5rem;
+  display: grid;
+  row-gap: 1rem;
+  z-index: 10;
+}
+
+.home-social-link {
+  color: #FFF;
+  font-size: 1.7rem;
+  transition: all 0.2s linear;
+}
+
+.home-social-link:hover {
+  color: #C57833;
+  transform: translateY(-7px);
+}
+
+.home-swiper,
+.home-content,
+.home-img,
+.home-shadow {
+  max-height: 100vh;
+}
+
+/* --------- SWIPER --------- */
+.swiper {
+  height: 100vh;
+}
+
+.swiper-pagination {
+  position: fixed;
+  width: initial;
+  height: -moz-max-content;
+  height: max-content;
+  top: 6rem;
+  right: 4rem;
+  left: initial;
+  font-size: 3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+}
+
+.swiper-pagination-total {
+  font-size: 1rem;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: initial;
+  width: initial;
+  height: initial;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.swiper-navigation {
+  position: absolute;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  font-size: 1.7rem;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+  z-index: 10;
+}
+
+/* --------- RESPONSIVE DESIGN --------- */
+@media only screen and (max-width: 450px) {
+  .home-article {
+    padding-top: 13rem;
+  }
+  h3.home-subtitle {
+    margin-bottom: 0.7rem;
+  }
+  h1.home-title {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+  }
+  .swiper-pagination {
+    top: 5rem;
+    right: 2rem;
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */

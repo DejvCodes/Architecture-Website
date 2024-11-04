@@ -1,0 +1,34 @@
+/* --------- GOOGLE FONTS --------- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap");
+
+/* .5rem = 8px | 1rem = 16px ... */
+
+/* --------- COLORS --------- */
+$white-color: #FFF;
+$black-color: #000;
+$header-bg-color: #00000096;
+$logo-hover-color: #C57833;
+
+/* --------- SIZES --------- */
+$header-height: 3.5rem;
+
+/* --------- FONTS & TYPOGRAPHY --------- */
+$body-font: 'Montserrat Alternates', sans-serif;
+$biggest-font-size: 3.2rem;
+$big-font-size: 3rem;
+$social-link-font-size: 1.7rem;
+$menu-btn-font-size: 1.4rem;
+$logo-font-size: 1.35rem;
+$h3-font-size: 1.25rem;
+$menu-font-size: 1.1rem;
+$normal-font-size: 1rem;
+
+/* --------- FONT WEIGHT --------- */
+$font-weight-regular: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+/* --------- Z-INDEX --------- */
+$z-index-header: 1000;
+$z-index-swiper: 10;
+$z-index-home-img: -1;
