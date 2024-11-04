@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------- Favicon ------------->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <!------------- CSS ------------->
+    <link rel="stylesheet" href="SCSS/style.css">
+    <link rel="stylesheet" href="SCSS/swiper.css">
+    <!------------- Font Awesome ------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Architecture</title>
+</head>
+<body>
+    <!---------------------- HEADER ---------------------->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav-logo">Architecture</a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link">Projects</a></li>
+                    <li><a href="#" class="nav-link">News</a></li>
+                    <li><a href="#" class="nav-link">Store</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+
+                <!------------ CLOSE MENU BUTTON ------------>
+                <div class="close-btn" id="close-btn">
+                    <i class="fas fa-xmark"></i>
+                </div>
+            </div>
+
+            <!------------ OPEN MENU BUTTON ------------>
+            <div class="open-btn" id="open-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!---------------------- MAIN ---------------------->
+    <main class="main">
+        <!---------------------- SECTION - HOME ---------------------->
+        <section class="home">
+            <div class="home-swiper swiper">
+                <div class="swiper-wrapper">
+                    <article class="home-article swiper-slide">
+                        <div class="home-data container">
+                            <h3 class="home-subtitle" data-swiper-parallax="500">Architecture</h3>
+                            <h1 class="home-title" data-swiper-parallax="400">
+                                Modern House <br> On The Rock
+                            </h1>
+                            <a href="#" class="home-button" data-swiper-parallax="300">
+                                See Project <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+
+                        <img src="img/home-1.jpg" class="home-img" alt="home-bg-img" data-swiper-parallax="-300">
+                        <div class="home-shadow"></div>
+                    </article>
+
+                    <article class="home-article swiper-slide">
+                        <div class="home-data container">
+                            <h3 class="home-subtitle" data-swiper-parallax="500">Architecture</h3>
+                            <h1 class="home-title" data-swiper-parallax="400">
+                                Luxury House <br> In the Forest
+                            </h1>
+                            <a href="#" class="home-button" data-swiper-parallax="300">
+                                See Project <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+
+                        <img src="img/home-2.jpg" class="home-img" alt="home-bg-img" data-swiper-parallax="-300">
+                        <div class="home-shadow"></div>
+                    </article>
+
+                    <article class="home-article swiper-slide">
+                        <div class="home-data container">
+                            <h3 class="home-subtitle" data-swiper-parallax="500">Architecture</h3>
+                            <h1 class="home-title" data-swiper-parallax="400">
+                                Relaxing Steep <br> Lake House
+                            </h1>
+                            <a href="#" class="home-button" data-swiper-parallax="300">
+                                See Project <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+
+                        <img src="img/home-3.jpg" class="home-img" alt="home-bg-img" data-swiper-parallax="-300">
+                        <div class="home-shadow"></div>
+                    </article>
+
+                    <article class="home-article swiper-slide">
+                        <div class="home-data container">
+                            <h3 class="home-subtitle" data-swiper-parallax="500">Architecture</h3>
+                            <h1 class="home-title" data-swiper-parallax="400">
+                                Luxury <br> Curved House
+                            </h1>
+                            <a href="#" class="home-button" data-swiper-parallax="300">
+                                See Project <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+
+                        <img src="img/home-4.jpg" class="home-img" alt="home-bg-img" data-swiper-parallax="-300">
+                        <div class="home-shadow"></div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="home-content">
+                <div class="home-social">
+                    <a href="https://www.facebook.com/" target="_blank" class="home-social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="home-social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="home-social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+
+                <!----- PAGINATION ----->
+                <div class="swiper-pagination"></div>
+
+                <!----- SWIPER BUTTONS ----->
+                <div class="swiper-navigation">
+                    <div class="swiper-button-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="JavaScript/swiper.js"></script>
+    <script src="JavaScript/script.js"></script>
+</body>
+</html>
